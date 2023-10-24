@@ -9,4 +9,14 @@ export class HeaderComponent {
 
   @Input() nome: string = 'Digite seu nome';
 
+  ngOnInit() {
+    if (this.nome === 'Rafael') {
+      console.log('to com fome');
+    }
+  }
+
+  cadastroValido(): boolean {
+    return this.nome === 'Ativado';
+  }
+
 }

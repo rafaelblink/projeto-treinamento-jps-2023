@@ -1,3 +1,9 @@
 <treinamento-header [nome]="nomePai"  />
 <treinamento-header />
+<form>
+  <div class="mb-3">
+    <label for="nomePai" class="form-label">Digite seu nome:</label>
+    <input type="text" class="form-control" id="nomePai" name="nomePai" [(ngModel)]="nomePai">
+  </div>
+</form>
 <router-outlet></router-outlet>

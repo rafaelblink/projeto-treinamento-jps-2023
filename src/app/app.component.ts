@@ -6,6 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'projeto-treinamento';
-  nomePai = 'Rafael';
+  title: string = 'projeto-treinamento';
+  nomePai: string = 'Rafael';
+
+  buscaNome(): string {
+    return this.nomePai;
+  }
 }
