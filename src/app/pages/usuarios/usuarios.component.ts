@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { IUsuario } from 'src/app/interfaces/usuario';
 import { UsuariosService } from 'src/app/services/usuarios.service';
 
 
@@ -9,11 +10,15 @@ import { UsuariosService } from 'src/app/services/usuarios.service';
 })
 export class UsuariosComponent {
 
+  usuarios: IUsuario[] = [];
+
   constructor(private usuariosService: UsuariosService) {}
 
   ngOnInit() {
     this.usuariosService.buscarTodos().subscribe(usuarios => {
-      console.log(usuarios);
+      this.usuarios = usuarios;
+    }, (error) => {
+      console.log(error);
     })
   }
 
