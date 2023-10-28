@@ -24,6 +24,6 @@ export class UsuariosComponent {
   }
 
   remover(id: number) {
-    console.log(id);
+    this.usuarios = this.usuarios.filter((usuario) => usuario.id !== id);
   }
 }
