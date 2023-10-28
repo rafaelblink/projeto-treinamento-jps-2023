@@ -14,7 +14,12 @@
       <th scope="row">{{ usuario.id }}</th>
       <td>{{ usuario.nome }}</td>
       <td>{{ usuario.idade }}</td>
-      <td>{{ usuario.ativo }}</td>
+      <td class="text-center">
+        <i *ngIf="usuario.ativo else elseBlock" class="bi bi-hand-thumbs-up-fill text-success"></i>
+        <ng-template #elseBlock>
+          <i *ngIf="!usuario.ativo" class="bi bi-hand-thumbs-down-fill text-danger"></i>
+        </ng-template>
+      </td>
     </tr>
   </tbody>
 </table>

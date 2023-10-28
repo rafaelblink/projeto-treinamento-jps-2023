@@ -1,3 +1,5 @@
+<h1 class="mt-3 mb-3">Cadastrar Usuários</h1>
+
 <form [formGroup]="usuarioForm" (submit)="enviar()">
   <div class="container">
     <div class="row">
@@ -15,6 +17,6 @@
       </div>
     </div>
     <a class="btn btn-secondary me-1" routerLink="/usuarios">Voltar</a>
-    <button class="btn btn-primary" type="submit">Cadastrar</button>
+    <button class="btn btn-primary" type="submit" [disabled]="usuarioForm.invalid">Cadastrar</button>
   </div>
 </form>
