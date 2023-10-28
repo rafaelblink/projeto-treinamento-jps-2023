@@ -7,6 +7,8 @@
       <th scope="col">Nome</th>
       <th scope="col">Idade</th>
       <th scope="col">Ativo</th>
+      <th scope="col">Ações</th>
+
     </tr>
   </thead>
   <tbody>
@@ -19,6 +21,9 @@
         <ng-template #elseBlock>
           <i *ngIf="!usuario.ativo" class="bi bi-hand-thumbs-down-fill text-danger"></i>
         </ng-template>
+      </td>
+      <td class="text-center">
+        <button type="button" class="btn btn-primary btn-sm" (click)="remover(usuario.id)">Deletar</button>
       </td>
     </tr>
   </tbody>
