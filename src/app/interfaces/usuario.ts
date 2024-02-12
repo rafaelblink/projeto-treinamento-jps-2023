@@ -1,5 +1,5 @@
 export interface IUsuario {
-  id: number;
+  id?: number;
   nome: string;
   idade: number;
   ativo: boolean;
